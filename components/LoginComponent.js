@@ -1,25 +1,34 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+  Alert,
+} from 'react-native';
 import styles from '../styles';
 import ActionLogin from '../CallApiLogin';
 const ImageLogin = () => {
   return (
-    <Image style={styles.imageLogin} source={require('../image/Image.png')}>
-    </Image>
+    <Image
+      style={styles.imageLogin}
+      source={require('../image/Image.png')}></Image>
   );
-}
-const LoginComponents = ({ navigation }) => {
-  const [userName, setUserName] = useState("");
-  const [passWord, setPassWord] = useState("");
+};
+const LoginComponents = ({navigation}) => {
+  const [userName, setUserName] = useState('');
+  const [passWord, setPassWord] = useState('');
 
   const submit = () => {
     ActionLogin(userName, passWord, navigation);
-  }
+  };
   return (
     <ScrollView
       howsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}>
-      <View style={{ flex: 1 }}>
+      <View style={{flex: 1}}>
         <View style={styles.item}>
           <ImageLogin />
         </View>
@@ -29,7 +38,7 @@ const LoginComponents = ({ navigation }) => {
         <View style={styles.item}>
           <TextInput
             defaultValue={userName}
-            onChangeText={userName => setUserName("lethuhien.qn96@gmail.com")}
+            onChangeText={userName => setUserName('lethuhien.qn96@gmail.com')}
             style={styles.input}></TextInput>
         </View>
         <View style={styles.item}>
@@ -39,18 +48,18 @@ const LoginComponents = ({ navigation }) => {
           <TextInput
             secureTextEntry={true}
             defaultValue={passWord}
-            onChangeText={passWord => setPassWord("pss201806")}
+            onChangeText={passWord => setPassWord('pss201806')}
             style={styles.input}></TextInput>
         </View>
         <View style={styles.item}>
           <TouchableOpacity
             style={styles.buttonLogin}
             onPress={() => submit(userName, passWord, navigation)}>
-            <Text style={{ color: "white" }}>Login</Text>
+            <Text style={{color: 'white'}}>Login</Text>
           </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
   );
-}
+};
 export default LoginComponents;
