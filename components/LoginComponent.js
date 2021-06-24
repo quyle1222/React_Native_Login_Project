@@ -38,7 +38,7 @@ const LoginComponents = ({navigation}) => {
         <View style={styles.item}>
           <TextInput
             defaultValue={userName}
-            onChangeText={userName => setUserName('lethuhien.qn96@gmail.com')}
+            onChangeText={userName => setUserName(userName)}
             style={styles.input}></TextInput>
         </View>
         <View style={styles.item}>
@@ -48,7 +48,7 @@ const LoginComponents = ({navigation}) => {
           <TextInput
             secureTextEntry={true}
             defaultValue={passWord}
-            onChangeText={passWord => setPassWord('pss201806')}
+            onChangeText={passWord => setPassWord(passWord)}
             style={styles.input}></TextInput>
         </View>
         <View style={styles.item}>

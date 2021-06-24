@@ -20,9 +20,18 @@ function getApi() {
         store.dispatch({
           type: 'ADD',
           id: res.data.data.userId,
-          name: res.data.data.userFullName,
-          email: res.data.data.userMail,
-          avatar: res.data.data.userAvatarPath,
+          userFullName: res.data.data.userFullName,
+          userMail: res.data.data.userMail,
+          userAvatarPath: res.data.data.userAvatarPath,
+          userAddress: res.data.data.userAddress,
+          userWeight: res.data.data.userWeight,
+          userHeight: res.data.data.userHeight,
+          userShortIntroduction: res.data.data.userShortIntroduction,
+          userAge: res.data.data.userAge,
+          userBirthDay: res.data.data.userBirthDay,
+          userFirstName: res.data.data.userFirstName,
+          userLastName: res.data.data.userLastName,
+          userPreferredHand: res.data.data.userPreferredHand,
         });
       }
     })
