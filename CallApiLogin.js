@@ -21,7 +21,6 @@ function ActionLogin(userName, passWord, navigation) {
     .then(res => {
       console.log(res.data.success);
       if (res.data.success == true) {
-        Alert.alert('Đăng nhập thành công');
         storeData(res.data.data.token, res.data.data.userId);
         navigation.navigate('Details');
       } else {

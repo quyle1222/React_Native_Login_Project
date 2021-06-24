@@ -22,6 +22,7 @@ function getApi() {
           id: res.data.data.userId,
           name: res.data.data.userFullName,
           email: res.data.data.userMail,
+          avatar: res.data.data.userAvatarPath,
         });
       }
     })
