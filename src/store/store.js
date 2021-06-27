@@ -31,7 +31,7 @@ const initState = {
   userLastName: '',
   userPreferredHand: '',
 };
-export const reducer = (state = initState, action = initAction) => {
+export const reducer = (state = initState, action = -) => {
   if (action.type === 'ADD') {
     return {
       ...state,

@@ -6,10 +6,10 @@ import {
   Image,
   TouchableOpacity,
   ScrollView,
-  Alert,
 } from 'react-native';
 import styles from '../styles';
 import ActionLogin from '../CallApiLogin';
+
 const ImageLogin = () => {
   return (
     <Image
@@ -17,10 +17,10 @@ const ImageLogin = () => {
       source={require('../image/Image.png')}></Image>
   );
 };
+
 const LoginComponents = ({navigation}) => {
   const [userName, setUserName] = useState('');
   const [passWord, setPassWord] = useState('');
-
   const submit = () => {
     ActionLogin(userName, passWord, navigation);
   };
